@@ -1,16 +1,15 @@
 // pages/tracker.jsx
 import { Footer } from '@/components/footer/footer'
 import { Navbar } from '@/components/navbar/navbar'
-import dynamic from 'next/dynamic'
 import { useState, useEffect } from 'react'
 import Button from '@mui/material/Button'
 import TripHistory from '@/components/Map/TravelData'
 import ExpenseTable from '@/components/Map/ExpenseTable'
 
 // disable SSR for the map component itself
-const LeafletMap = dynamic(() => import('@/components/Map/Leaflet'), {
-  ssr: false
-})
+// const LeafletMap = dynamic(() => import('@/components/Map/Leaflet'), {
+//   ssr: false
+// })
 
 export default function TrackerPage () {
   const [position, setPosition] = useState({ lat: 51.505, lng: -0.09 })
